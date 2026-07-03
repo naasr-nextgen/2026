@@ -5,7 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://naasr-nextgen.github.io/",
+  site: "https://naasr-nextgen.github.io",
   base: "/2026",
   output: "static",
   vite: {
