@@ -18,7 +18,7 @@ const { Content } = await render(entry);
 const { title, excerpt, pubDate, category } = entry.data;
 ---
 
-<Layout title={`${title} - Elementary`}>
+<Layout title={`${title} | NAASR NextGen`}>
 	<Section>
 		<Container>
 			<div class="max-w-3xl mx-auto">
@@ -26,7 +26,7 @@ const { title, excerpt, pubDate, category } = entry.data;
 					href="/blog"
 					class="inline-flex items-center gap-1 text-sm text-brand-foreground/60 hover:text-brand-foreground mb-8 transition-colors"
 				>
-					← Back to blog
+					← Read more news
 				</a>
 
 				<div class="flex gap-4 mb-8">
@@ -41,19 +41,11 @@ const { title, excerpt, pubDate, category } = entry.data;
 							</span>
 						</div>
 
-						<h1 class="font-fredoka text-3xl lg:text-4xl text-brand-foreground font-bold leading-tight">
+						<h1 class="font-fredoka text-3xl lg:text-4xl text-brand-foreground leading-tight">
 							{title}
 						</h1>
 					</div>
 				</div>
-
-				{
-					excerpt && (
-						<p class="text-lg text-brand-foreground/70 font-nunito mb-8 leading-relaxed border-b border-brand-foreground/10 pb-8">
-							{excerpt}
-						</p>
-					)
-				}
 
 				<div class="prose prose-lg max-w-none font-nunito text-brand-foreground">
 					<Content />

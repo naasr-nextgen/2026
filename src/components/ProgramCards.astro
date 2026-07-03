@@ -1,36 +1,36 @@
 ---
-import MaterialSymbolsPaletteOutline from '~icons/material-symbols/palette-outline'
-import IonMusicNote from '~icons/ion/music-note'
-import TablerMicroscope from '~icons/tabler/microscope'
-import MaterialSymbolsTrophyOutlineRounded from '~icons/material-symbols/trophy-outline-rounded'
+import MaterialSymbolsPersonRaisedHand from '~icons/material-symbols/person-raised-hand'
+import MaterialSymbolsLaptopMac from '~icons/material-symbols/laptop-mac'
+import MaterialSymbolsMobileBlock from '~icons/material-symbols/mobile-block'
+import MaterialSymbolsVoicemail2 from '~icons/material-symbols/voicemail-2'
 
 const programs = [
 	{
-		icon: MaterialSymbolsPaletteOutline,
-		title: "Art & Creativity",
+		icon: MaterialSymbolsPersonRaisedHand,
+		title: "Attendance",
 		description:
-			"Drawing, painting, sculpture, and digital art — our students explore every medium to express themselves.",
-		accent: "border-brand-red",
-		iconColor: "text-brand-red",
-	},
-	{
-		icon: IonMusicNote,
-		title: "Music & Performing Arts",
-		description: "Choir, band, and theater give every child a stage to shine. Annual spring musical included!",
+			"In-person class attendance at the NAASR Vartan Gregorian Building is mandatory, 9 AM–4:30 PM, Monday–Friday for the entirety of the program duration from 13–31 July 2026. Attendance is also mandatory during the evening project presentation event from 7–9 PM on Thursday, 30 July 2026, at NAASR.",
 		accent: "border-brand-blue",
 		iconColor: "text-brand-blue",
 	},
 	{
-		icon: TablerMicroscope,
-		title: "STEM Discovery",
-		description: "Robotics, coding, and hands-on experiments — building the innovators of tomorrow, today.",
-		accent: "border-brand-green",
-		iconColor: "text-brand-green",
+		icon: MaterialSymbolsLaptopMac,
+		title: "Technology",
+		description: "Participants will need a laptop or tablet computer to complete their group project. In case a personal device is not available for participant use, local libraries (such as the Cambridge Public Library, and the Watertown Free Public Library) allow users with a valid library card to borrow laptops for 2-week periods.",
+		accent: "border-brand-yellow",
+		iconColor: "text-brand-yellow",
 	},
 	{
-		icon: MaterialSymbolsTrophyOutlineRounded,
-		title: "Sports & Wellness",
-		description: "Soccer, basketball, track, and yoga keep our students active, healthy, and having fun.",
+		icon: MaterialSymbolsMobileBlock,
+		title: "Cell Phones",
+		description: "Cell phones will be collected at the start of the school day. Phones are returned at the completion of the work day or when a participant leaves the NAASR Vartan Gregorian Building.",
+		accent: "border-brand-blue",
+		iconColor: "text-brand-blue",
+	},
+	{
+		icon: MaterialSymbolsVoicemail2,
+		title: "Phone Messages",
+		description: "For parent(s)/guardian(s) who need to contact their child during the work day, we request that parent(s)/guardian(s) contact the NAASR office to relay messages to participants, as cell phone usage is not permissible during the program work day.",
 		accent: "border-brand-yellow",
 		iconColor: "text-brand-yellow",
 	},
@@ -48,7 +48,7 @@ const programs = [
 						<Icon class="w-8 h-8" />
 					</div>
 					<div>
-						<h3 class="text-xl font-bold text-brand-foreground mb-2">{title}</h3>
+						<h3 class="text-xl text-brand-foreground mb-2">{title}</h3>
 						<p>{description}</p>
 					</div>
 				</div>

@@ -40,6 +40,13 @@ const { title, seoTitle, seoDescription, noindex = false } = Astro.props;
 		<meta name="twitter:description" content={seoDescription} />
 		<!-- <meta name="twitter:image" content={`${baseUrl}/images/og-image.jpg`} /> -->
 
+		<link rel="preload" as="font" type="font/woff2" href="/fonts/funnel-display/funnel-display-v3-latin-regular.woff2" crossorigin />
+		<link rel="preload" as="font" type="font/woff2" href="/fonts/nunito/nunito-v32-latin-regular.woff2" crossorigin />
+		<link rel="preload" as="font" type="font/woff2" href="/fonts/nunito/nunito-v32-latin-500.woff2" crossorigin />
+		<link rel="preload" as="font" type="font/woff2" href="/fonts/nunito/nunito-v32-latin-600.woff2" crossorigin />
+		<link rel="preload" as="font" type="font/woff2" href="/fonts/nunito/nunito-v32-latin-700.woff2" crossorigin />
+		<link rel="preload" as="font" type="font/woff2" href="/fonts/nunito/nunito-v32-latin-900.woff2" crossorigin />
+
 		<title>{title}</title>
 	</head>
 	<body>

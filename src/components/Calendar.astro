@@ -1,0 +1,71 @@
+---
+import { schedule } from '../data/sessions';
+---
+
+<!-- Responsive scroll container -->
+<div class="overflow-x-auto my-6 border border-white/10 rounded-sm">
+  <table class="w-full text-left border-collapse text-sm md:text-base">
+    <thead>
+      <tr class="bg-linear-to-br from-blue-900/40 to-blue-900/20 text-black">
+        <th class="px-6 py-4 font-semibold text-lg border-r border-white/10">Date</th>
+        <th class="px-6 py-4 font-semibold text-lg border-r border-white/10">Topic(s)</th>
+        <th class="px-6 py-4 font-semibold text-lg border-r border-white/10">Guest Expert(s)</th>
+        <th class="px-6 py-4 font-semibold text-lg">Homework</th>
+      </tr>
+    </thead>
+
+    <tbody class="divide-y divide-white/5">
+      {schedule.map((session) => (
+        <tr class="even:bg-gray-200 hover:bg-blue-500/10 transition-colors duration-200">
+          <td class="px-6 py-4 border-r border-white/5 align-top">{session.date}</td>
+          <td class="px-6 py-4 border-r border-white/5 align-top">
+              {session.topics.length > 1 ? (
+                <ul class="list-disc list-inside">
+                  {session.topics.map((topic) => <li>{topic}</li>)}
+                </ul>
+              ) : (
+                <span>{session.topics[0]}</span>
+              )}
+          </td>
+          <td class="px-6 py-4 border-r border-white/5 align-top">
+              {session.guest.length > 1 ? (
+                <ul class="list-disc list-inside">
+                  {session.guest.map((guest) => <li>{guest}</li>)}
+                </ul>
+              ) : (
+                <span>{session.guest[0]}</span>
+              )}
+          </td>
+          <!-- Conditional Rendering for Link -->
+                <td class="px-6 py-4 align-top">
+                  {session.homeworkUrl ? (
+                    <a
+                      href={session.homeworkUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class=" hover:text-brand-yellow underline text-brand-blue"
+                    >
+                      {session.homework}
+                    </a>
+                  ) : (
+                    session.homework
+                  )}
+                </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
+
+<style>
+  /* Custom scrollbar styling to match your original design requirements */
+  .overflow-x-auto {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(59, 130, 246, 0.4) transparent;
+  }
+  .overflow-x-auto::-webkit-scrollbar { height: 6px; }
+  .overflow-x-auto::-webkit-scrollbar-thumb {
+    background: rgba(59, 130, 246, 0.4);
+    border-radius: 3px;
+  }
+</style>

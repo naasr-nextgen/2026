@@ -1,0 +1,45 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Section from "@/components/Section.astro";
+import Container from "@/components/Container.astro";
+import SectionHeading from "@/components/SectionHeading.astro";
+import TeachersList from "@/components/Teachers.astro";
+import StaffList from "@/components/Staff.astro";
+import GuestsList from "@/components/Guests.astro";
+---
+
+<Layout title="People | NAASR NextGen">
+	<Section>
+		<Container>
+			<SectionHeading>
+				<h1 class="text-4xl">Meet Our Faculty, Guest Experts, and Staff</h1>
+				<p>Our dedicated team of educators, guest lecturers, and administrators brings passion, experience, and creativity to the NextGen classroom.</p>
+<hr />
+
+				<h2 class="text-3xl text-center text-brand-blue">Core Faculty</h2>
+			</SectionHeading>
+
+            <TeachersList />
+		</Container>
+	</Section>
+
+	<Section>
+		<Container>
+			<SectionHeading>
+				<h2 class="text-3xl text-center text-brand-blue">Guest Faculty</h2>
+			</SectionHeading>
+
+            <GuestsList />
+		</Container>
+	</Section>
+
+	<Section>
+		<Container>
+			<SectionHeading>
+				<h2 class="text-3xl text-center text-brand-blue">NAASR Staff Support</h2>
+			</SectionHeading>
+
+            <StaffList />
+		</Container>
+	</Section>
+</Layout>

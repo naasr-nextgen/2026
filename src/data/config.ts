@@ -1,48 +1,49 @@
 // Global variables
 export const siteLang = "en-US";
 export const siteCurrency = "USD";
-export const siteName = "Elementary";
-export const siteSlogan = "";
-export const themeColor = "#fef08a";
+export const siteName = "NextGen 2026";
+export const siteSlogan =
+  "A project-driven intellectual lab of Armenian Studies for high school students.";
+export const themeColor = "#025786";
 export const unitSystem = "imperial";
 
 export const phone = {
-	href: "tel:+123456789",
-	label: "(123) 456-789",
+  href: "tel:+6174891610",
+  label: "(617) 489-1610",
 };
 
 export const email = {
-	href: "mailto:info@elementary.com",
-	label: "info@elementary.com",
+  href: "mailto:hq@naasr.org",
+  label: "hq@naasr.org",
 };
 
 export const address = {
-	street: "1234 Space Street",
-	city: "Galaxy City",
-	zip: "12345",
-	state: "Milky Way",
-	country: "Space",
+  street: "395 Concord Avenue",
+  city: "Belmont",
+  zip: "02478",
+  state: "MA",
+  country: "USA",
 };
 
 export const socialMedia = {
-	facebook: {
-		url: "https://facebook.com",
-		label: "Facebook",
-		icon: "facebook",
-	},
-	x: {
-		url: "https://x.com",
-		label: "X",
-		icon: "x",
-	},
-	instagram: {
-		url: "https://instagram.com",
-		label: "Instagram",
-		icon: "instagram",
-	},
-	youtube: {
-		url: "https://youtube.com",
-		label: "YouTube",
-		icon: "youtube",
-	},
+  facebook: {
+    url: "https://www.facebook.com/NAASR1955/",
+    label: "Facebook",
+    icon: "facebook",
+  },
+  x: {
+    url: "https://twitter.com/naasr1955",
+    label: "X",
+    icon: "x",
+  },
+  instagram: {
+    url: "https://www.instagram.com/naasrnotes/",
+    label: "Instagram",
+    icon: "instagram",
+  },
+  youtube: {
+    url: "https://www.youtube.com/c/ArmenianStudies",
+    label: "YouTube",
+    icon: "youtube",
+  },
 };

@@ -1,6 +1,6 @@
 ---
 import { siteName } from "@/data/config";
-import IconLogo from "@/assets/logo/logo.svg";
+import IconLogo from "@/assets/logo/naasr-logo-2.svg";
 import { MainMenu } from "@/data/menu";
 import MobileMenu from "@/components/MobileMenu.astro";
 
@@ -16,13 +16,13 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 		<div class="container py-4 flex items-center justify-between gap-x-4">
 			<!-- Logo -->
 			<a href="/" class="flex gap-x-4 items-center">
-				<IconLogo class:list={"size-12"} />
-				<span class="font-bold lowercase font-fredoka text-4xl">{siteName}</span>
+				<IconLogo class:list={"size-14"} />
+				<span class="lowercase font-inter text-4xl">{siteName}</span>
 			</a>
 
 			<!-- Menu -->
 			<nav>
-				<ul class="hidden md:flex gap-6 font-fredoka text-xl tracking-wide font-semibold">
+				<ul class="hidden md:flex gap-6 font-inter text-xl tracking-wide">
 					{
 						MainMenu.map((item) => (
 							<li>
