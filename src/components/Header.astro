@@ -15,14 +15,14 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 	<div class="bg-white/90 backdrop-blur-md">
 		<div class="container py-4 flex items-center justify-between gap-x-4">
 			<!-- Logo -->
-			<a href="/" class="flex gap-x-4 items-center">
+			<a href="/2026/" class="flex gap-x-4 items-center">
 				<IconLogo class:list={"size-14"} />
-				<span class="lowercase font-inter text-4xl">{siteName}</span>
+				<span class="lowercase font-funnel-display text-4xl">{siteName}</span>
 			</a>
 
 			<!-- Menu -->
 			<nav>
-				<ul class="hidden md:flex gap-6 font-inter text-xl tracking-wide">
+				<ul class="hidden md:flex gap-6 font-funnel-display text-xl tracking-wide">
 					{
 						MainMenu.map((item) => (
 							<li>
