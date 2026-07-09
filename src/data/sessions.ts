@@ -41,7 +41,6 @@ export const schedule: Sessions[] = [
     date: "7/15/2026",
     topics: [
       "Medieval Armenian Manuscripts",
-      "Everyday Cosmopolitanism in Medieval Armenia with Archaeological Objects",
       "Epics",
       "Food Traditions",
     ],
