@@ -8,16 +8,21 @@ import SectionHeading from "@/components/SectionHeading.astro";
 import InfoCards from "@/components/InfoCards.astro";
 import Stats from "@/components/Stats.astro";
 import ProgramCards from "@/components/ProgramCards.astro";
+
+// Page metadata
+const title = "About";
+const seoTitle = "About";
+const seoDescription = "Immersive Armenian Studies: The NAASR NextGen Summer Program in Belmont, MA offers project-based learning with expert faculty & guest scholars.";
 ---
 
-<Layout title="About | NAASR NextGen">
+<Layout {title} {seoTitle} {seoDescription}>
 
 	<Section class:list={"bg-neutral-50"}>
 		<Container>
 			<SectionHeading>
-				<h2 class="text-4xl tracking-wide">About NextGen</h2>
+				<h1 class="text-4xl tracking-wide">About NextGen</h1>
 				<p>
-				For three weeks, students come together for immersive, project-driven study guided by world-class faculty and guest scholars. In this hands-on program, students research, debate, design, and work in teams to craft a real digital campaign presented to a live audience. Experts drawn from leading universities and research institutions bring the living edge of scholarship directly into the classroom.
+				For three weeks, students come together for immersive, project-driven study guided by world-class Armenian Studies faculty and guest scholars. In this hands-on program, students research, debate, design, and work in teams to craft a real digital campaign presented to a live audience. Experts drawn from leading universities and research institutions bring the living edge of scholarship directly into the classroom.
 				</p>
 			</SectionHeading>
 

@@ -15,10 +15,11 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
-const { title, excerpt, pubDate, category } = entry.data;
+const { title, excerpt, pubDate, category, seoTitle, seoDescription } = entry.data;
 ---
 
-<Layout title={`${title} | NAASR NextGen`}>
+<Layout {title} {seoTitle} {seoDescription}>
+
 	<Section>
 		<Container>
 			<div class="max-w-3xl mx-auto">
@@ -53,4 +54,5 @@ const { title, excerpt, pubDate, category } = entry.data;
 			</div>
 		</Container>
 	</Section>
+
 </Layout>

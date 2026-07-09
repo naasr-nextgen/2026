@@ -1,48 +1,48 @@
 export interface MenuItem {
-	label: string;
-	href: string;
-	target?: "_self" | "_blank";
-    class?: string;
-    hoverClass?: string;
-    activeClass?: string;
+  label: string;
+  href: string;
+  target?: "_self" | "_blank";
+  class?: string;
+  hoverClass?: string;
+  activeClass?: string;
 }
 
 export interface LayoutProps {
-	title: string;
-    seoTitle?: string;
-	seoDescription?: string;
-	noindex?: boolean;
+  title: string; // Required
+  seoTitle?: string; // Required
+  seoDescription?: string; // Required
+  noindex?: boolean;
 }
 
 export interface ContainerProps {
-    class?: string;
-    contain?: boolean;
+  class?: string;
+  contain?: boolean;
 }
 
 export interface MainHeadingProps {
-    align?: "left" | "center" | "right";
-    class?: string;
+  align?: "left" | "center" | "right";
+  class?: string;
 }
 
 export interface SectionProps {
-    id?: string;
-    class?: string;
+  id?: string;
+  class?: string;
 }
 
 export interface SectionHeadingProps {
-    class?: string;
+  class?: string;
 }
 
 export interface FaqItemProps {
-	id: string;
-	question: string;
-	answer: string;
-	open?: boolean;
+  id: string;
+  question: string;
+  answer: string;
+  open?: boolean;
 }
 
 import type { HTMLAttributes } from "astro/types";
 
 export interface VideoProps extends HTMLAttributes<"video"> {
-	src: string;
-	overlay?: string;
+  src: string;
+  overlay?: string;
 }

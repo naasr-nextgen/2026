@@ -6,9 +6,15 @@ import SectionHeading from "@/components/SectionHeading.astro";
 import TeachersList from "@/components/Teachers.astro";
 import StaffList from "@/components/Staff.astro";
 import GuestsList from "@/components/Guests.astro";
+
+// Page metadata
+const title = "People";
+const seoTitle = "People";
+const seoDescription = "Immersive Armenian Studies: The NAASR NextGen Summer Program in Belmont, MA offers project-based learning with expert faculty & guest scholars.";
 ---
 
-<Layout title="People | NAASR NextGen">
+<Layout {title} {seoTitle} {seoDescription}>
+
 	<Section>
 		<Container>
 			<SectionHeading>
@@ -42,4 +48,5 @@ import GuestsList from "@/components/Guests.astro";
             <StaffList />
 		</Container>
 	</Section>
+
 </Layout>

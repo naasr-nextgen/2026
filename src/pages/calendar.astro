@@ -6,9 +6,16 @@ import MainHeading from "@/components/MainHeading.astro";
 import Button from "@/components/buttons/Button.astro";
 import SectionHeading from "@/components/SectionHeading.astro";
 import ScheduleTable from '@/components/Calendar.astro';
+
+// Page metadata
+const title = "Course Calendar";
+const seoTitle = "Course Calendar";
+const seoDescription = "Discover the NAASR NextGen Summer Armenian Studies Schedule: View our course calendar in Belmont, MA for sessions with guest faculty, topics, and homework.";
 ---
-<Layout title="Course Calendar | NAASR NextGen">
-	<Section class:list={"bg-neutral-50"}>
+
+<Layout {title} {seoTitle} {seoDescription}>
+
+    <Section class:list={"bg-neutral-50"}>
 		<Container>
 			<SectionHeading>
 				<h1 class="text-4xl tracking-wide">Course Calendar</h1>
@@ -16,4 +23,5 @@ import ScheduleTable from '@/components/Calendar.astro';
 			<ScheduleTable />
 		</Container>
 	</Section>
+
 </Layout>

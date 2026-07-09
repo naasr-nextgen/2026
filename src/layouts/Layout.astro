@@ -6,7 +6,13 @@ import { siteName, siteLang, themeColor } from "@/data/config";
 import type { LayoutProps as Props } from "@/types";
 
 const baseUrl = Astro.url.href;
-const { title, seoTitle, seoDescription, noindex = false } = Astro.props;
+const {
+  title,
+  seoTitle,
+  seoDescription,
+  noindex = false
+} = Astro.props;
+const finalOgImage = `/2026/images/og-image.jpg`;
 ---
 
 <!doctype html>
@@ -29,7 +35,7 @@ const { title, seoTitle, seoDescription, noindex = false } = Astro.props;
 		<meta property="og:url" content={Astro.url} />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={`${seoTitle} | ${siteName}`} />
-		<meta property="og:image" content={`${baseUrl}/images/og-image.jpg`} />
+		<meta property="og:image" content={finalOgImage} />
 		<meta property="og:description" content={seoDescription} />
 		<meta property="og:site_name" content={siteName} />
 		<meta property="og:locale" content={siteLang} />
@@ -47,7 +53,7 @@ const { title, seoTitle, seoDescription, noindex = false } = Astro.props;
 		<link rel="preload" as="font" type="font/woff2" href="/2026/fonts/nunito/nunito-v32-latin-700.woff2" crossorigin />
 		<link rel="preload" as="font" type="font/woff2" href="/2026/fonts/nunito/nunito-v32-latin-900.woff2" crossorigin />
 
-		<title>{title}</title>
+		<title>{title} | {siteName}</title>
 	</head>
 	<body>
 		<Header />

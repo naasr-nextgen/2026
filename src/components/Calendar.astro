@@ -2,11 +2,10 @@
 import { schedule } from '../data/sessions';
 ---
 
-<!-- Responsive scroll container -->
-<div class="overflow-x-auto my-6 border border-white/10 rounded-sm">
+<div class="my-6 border border-white/10 rounded-sm overflow-x-auto md:overflow-visible">
   <table class="w-full text-left border-collapse text-sm md:text-base">
-    <thead>
-      <tr class="bg-linear-to-br from-blue-900/40 to-blue-900/20 text-black">
+    <thead class="hidden md:table-header-group bg-linear-to-br from-blue-900/40 to-blue-900/20">
+      <tr class="text-black">
         <th class="px-6 py-4 font-semibold text-lg border-r border-white/10">Date</th>
         <th class="px-6 py-4 font-semibold text-lg border-r border-white/10">Topic(s)</th>
         <th class="px-6 py-4 font-semibold text-lg border-r border-white/10">Guest Expert(s)</th>
@@ -14,43 +13,91 @@ import { schedule } from '../data/sessions';
       </tr>
     </thead>
 
-    <tbody class="divide-y divide-white/5">
+    <tbody class="block md:table-row-group divide-y md:divide-y divide-white/5">
       {schedule.map((session) => (
-        <tr class="even:bg-gray-200 hover:bg-blue-500/10 transition-colors duration-200">
-          <td class="px-6 py-4 border-r border-white/5 align-top">{session.date}</td>
-          <td class="px-6 py-4 border-r border-white/5 align-top">
-              {session.topics.length > 1 ? (
+        <tr class="block md:table-row even:bg-gray-200 hover:bg-blue-500/10 transition-colors duration-200 mb-6 md:mb-0 border border-white/10 md:border-0 rounded-sm md:rounded-none p-4 md:p-0">
+
+          {/* Date */}
+          <td class="block md:table-cell px-0 md:px-6 py-2 md:py-4 border-r-0 md:border-r border-white/5 align-top">
+            <h2 class="text-xl md:text-base md:font-normal md:before:content-none">
+              {session.date}
+            </h2>
+          </td>
+
+          {/* Topic(s) */}
+          <td class="block md:table-cell px-0 md:px-6 py-2 md:py-4 border-r-0 md:border-r border-white/5 align-top before:content-['Topics:'] before:font-semibold before:mr-2 md:before:content-none">
+            {session.topics.length > 1 ? (
+              <ul class="list-disc list-inside">
+                {session.topics.map((topic) => <li>{topic}</li>)}
+              </ul>
+            ) : (
+              <span>{session.topics[0]}</span>
+            )}
+          </td>
+
+          {/* Guest Expert(s) */}
+          <td class="block md:table-cell px-0 md:px-6 py-2 md:py-4 border-r-0 md:border-r border-white/5 align-top before:content-['Experts:'] before:font-semibold before:mr-2 md:before:content-none">
+            {session.guest.length > 1 ? (
+              <ul class="list-disc list-inside">
+                {session.guest.map((guest) => <li>{guest}</li>)}
+              </ul>
+            ) : (
+              <span>{session.guest[0]}</span>
+            )}
+          </td>
+
+          {/* Homework */}
+          <td class="block md:table-cell px-0 md:px-6 py-2 md:py-4 align-top before:content-['Homework:'] before:font-semibold before:mr-2 md:before:content-none">
+            {Array.isArray(session.homework) ? (
+              session.homework.length > 1 ? (
                 <ul class="list-disc list-inside">
-                  {session.topics.map((topic) => <li>{topic}</li>)}
+                  {session.homework.map((item) => (
+                    <li>
+                      {session.homeworkUrl ? (
+                        <a
+                          href={Array.isArray(session.homeworkUrl) ? session.homeworkUrl[0] : session.homeworkUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="hover:text-brand-yellow underline text-brand-blue"
+                        >
+                          {item}
+                        </a>
+                      ) : (
+                        item
+                      )}
+                    </li>
+                  ))}
                 </ul>
               ) : (
-                <span>{session.topics[0]}</span>
-              )}
-          </td>
-          <td class="px-6 py-4 border-r border-white/5 align-top">
-              {session.guest.length > 1 ? (
-                <ul class="list-disc list-inside">
-                  {session.guest.map((guest) => <li>{guest}</li>)}
-                </ul>
+                session.homeworkUrl ? (
+                  <a
+                    href={Array.isArray(session.homeworkUrl) ? session.homeworkUrl[0] : session.homeworkUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="hover:text-brand-yellow underline text-brand-blue"
+                  >
+                    {session.homework[0]}
+                  </a>
+                ) : (
+                  session.homework[0]
+                )
+              )
+            ) : (
+              session.homeworkUrl ? (
+                <a
+                  href={Array.isArray(session.homeworkUrl) ? session.homeworkUrl[0] : session.homeworkUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:text-brand-yellow underline text-brand-blue"
+                >
+                  {session.homework}
+                </a>
               ) : (
-                <span>{session.guest[0]}</span>
-              )}
+                session.homework
+              )
+            )}
           </td>
-          <!-- Conditional Rendering for Link -->
-                <td class="px-6 py-4 align-top">
-                  {session.homeworkUrl ? (
-                    <a
-                      href={session.homeworkUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class=" hover:text-brand-yellow underline text-brand-blue"
-                    >
-                      {session.homework}
-                    </a>
-                  ) : (
-                    session.homework
-                  )}
-                </td>
+
         </tr>
       ))}
     </tbody>
@@ -58,7 +105,6 @@ import { schedule } from '../data/sessions';
 </div>
 
 <style>
-  /* Custom scrollbar styling to match your original design requirements */
   .overflow-x-auto {
     scrollbar-width: thin;
     scrollbar-color: rgba(59, 130, 246, 0.4) transparent;

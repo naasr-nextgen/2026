@@ -1,9 +1,9 @@
 // Global variables
 export const siteLang = "en-US";
 export const siteCurrency = "USD";
-export const siteName = "NextGen 2026";
+export const siteName = "NAASR NextGen";
 export const siteSlogan =
-  "A project-driven intellectual lab of Armenian Studies for high school students.";
+  "A project-driven Armenian Studies lab for high school students and recent graduates.";
 export const themeColor = "#025786";
 export const unitSystem = "imperial";
 

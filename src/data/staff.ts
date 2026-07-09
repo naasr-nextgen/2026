@@ -1,5 +1,6 @@
 import Ani from "@/assets/images/ani-babaian.jpg";
 import Marc from "@/assets/images/marc-mamigonian.jpg";
+import Miles from "@/assets/images/miles-mamigonian.jpg";
 
 export const teachers = [
   {
@@ -21,7 +22,6 @@ export const teachers = [
     role: "Dean V. Shahinian Fellow for Special Initiatives",
     bio: "Contact for administrative inquiries (program policies and accommodation requests).",
     email: "miles@naasr.org",
-    initials: "MM",
-    color: "bg-brand-yellow",
+    image: Miles,
   },
 ];

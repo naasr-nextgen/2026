@@ -11,9 +11,15 @@ import Stats from "@/components/Stats.astro";
 import ProgramCards from "@/components/ProgramCards.astro";
 import Agenda from "@/components/Agenda.astro";
 import AgendaFriday from "@/components/AgendaFriday.astro";
+
+// Page metadata
+const title = "Daily Timetable";
+const seoTitle = "Daily Timetable";
+const seoDescription = "See the NAASR NextGen Summer Program Daily Timetable: View detailed timings for all activities in Belmont, MA and learn about typical days.";
 ---
 
-<Layout title="Daily Timetable | NAASR NextGen">
+<Layout {title} {seoTitle} {seoDescription}>
+
 	<Section class:list={"bg-neutral-50"}>
 		<Container>
 			<SectionHeading>
@@ -32,4 +38,5 @@ import AgendaFriday from "@/components/AgendaFriday.astro";
 			<AgendaFriday />
 		</Container>
 	</Section>
+
 </Layout>
