@@ -83,7 +83,7 @@ export const schedule: Sessions[] = [
     topics: [
       "Armenian Feminism",
       "Armenian as a Pluricentric Indo-European Language",
-      " Armenoturkish",
+      "Armenoturkish",
       "Learning Armenian (as Armenians and non-Armenians)",
     ],
     guest: ["Lerna Ekmekcioglu", "Ani Babaian"],
@@ -114,10 +114,9 @@ export const schedule: Sessions[] = [
       "Genocide",
       "Resistance",
       "Humanitarian Aid",
-      "Denialism",
-      "Misinformation and Disinformation",
+      "Public Speaking"
     ],
-    guest: ["Khatchig Mouradian", "Henry Theriault"],
+    guest: ["Khatchig Mouradian"],
     homework: ["none"],
   },
   {
@@ -143,12 +142,10 @@ export const schedule: Sessions[] = [
   },
   {
     date: "7/31/2026",
-    topics: ["Wrap up discussion"],
+    topics: ["Denialism", "Misinformation and Disinformation", "Wrap up discussion"],
     guest: [
       "Ara Araz",
       "Henry Theriault",
-      "Hratch Tchilingirian",
-      "Razmik Panossian",
     ],
     homework: ["Stay in touch!"],
   },
